@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-gulp-sass/gulp-sass/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-gulp-sass/node_modules/gulp-sass/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,9 +190,9 @@
 <body>
 <div class="header low">
     <h1 style="font-weight: bold;">
-        <a href="https://github.com/npmtest/node-npmtest-gulp-sass">npmtest-gulp-sass (v0.0.3)</a>
+        <a href="https://github.com/npmtest/node-npmtest-gulp-sass">npmtest-gulp-sass (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-sass/gulp-sass/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-sass/node_modules/gulp-sass/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">13.75% <small>(11 / 80)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-sass/gulp-sass/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-sass/node_modules/gulp-sass/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -607,155 +605,155 @@ var PLUGIN_NAME = 'gulp-sass';
 //////////////////////////////
 // Main Gulp Sass function
 //////////////////////////////
-var gulpSass = <span class="fstat-no" title="function not covered" >function gulpSass(options, sync) {</span>
-<span class="cstat-no" title="statement not covered" >  return through.obj(<span class="fstat-no" title="function not covered" >function(file, enc, cb) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var opts,</span>
+var gulpSass = <span class="fstat-no" title="function not covered">function gulpSass(options, sync) {</span>
+<span class="cstat-no" title="statement not covered">  return through.obj(<span class="fstat-no" title="function not covered">function(file, enc, cb) {</span></span>
+<span class="cstat-no" title="statement not covered">    var opts,</span>
         filePush,
         errorM,
         callback,
         result;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (file.isNull()) {</span>
-<span class="cstat-no" title="statement not covered" >      return cb(null, file);</span>
+<span class="cstat-no" title="statement not covered">    if (file.isNull()) {</span>
+<span class="cstat-no" title="statement not covered">      return cb(null, file);</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (file.isStream()) {</span>
-<span class="cstat-no" title="statement not covered" >      return cb(new gutil.PluginError(PLUGIN_NAME, 'Streaming not supported'));</span>
+<span class="cstat-no" title="statement not covered">    if (file.isStream()) {</span>
+<span class="cstat-no" title="statement not covered">      return cb(new gutil.PluginError(PLUGIN_NAME, 'Streaming not supported'));</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (path.basename(file.path).indexOf('_') === 0) {</span>
-<span class="cstat-no" title="statement not covered" >      return cb();</span>
+<span class="cstat-no" title="statement not covered">    if (path.basename(file.path).indexOf('_') === 0) {</span>
+<span class="cstat-no" title="statement not covered">      return cb();</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (!file.contents.length) {</span>
-<span class="cstat-no" title="statement not covered" >      file.path = gutil.replaceExtension(file.path, '.css');</span>
-<span class="cstat-no" title="statement not covered" >      return cb(null, file);</span>
+<span class="cstat-no" title="statement not covered">    if (!file.contents.length) {</span>
+<span class="cstat-no" title="statement not covered">      file.path = gutil.replaceExtension(file.path, '.css');</span>
+<span class="cstat-no" title="statement not covered">      return cb(null, file);</span>
     }
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    opts = clonedeep(options || {});</span>
-<span class="cstat-no" title="statement not covered" >    opts.data = file.contents.toString();</span>
+<span class="cstat-no" title="statement not covered">    opts = clonedeep(options || {});</span>
+<span class="cstat-no" title="statement not covered">    opts.data = file.contents.toString();</span>
 &nbsp;
     // we set the file path here so that libsass can correctly resolve import paths
-<span class="cstat-no" title="statement not covered" >    opts.file = file.path;</span>
+<span class="cstat-no" title="statement not covered">    opts.file = file.path;</span>
 &nbsp;
     // Ensure `indentedSyntax` is true if a `.sass` file
-<span class="cstat-no" title="statement not covered" >    if (path.extname(file.path) === '.sass') {</span>
-<span class="cstat-no" title="statement not covered" >      opts.indentedSyntax = true;</span>
+<span class="cstat-no" title="statement not covered">    if (path.extname(file.path) === '.sass') {</span>
+<span class="cstat-no" title="statement not covered">      opts.indentedSyntax = true;</span>
     }
 &nbsp;
     // Ensure file's parent directory in the include path
-<span class="cstat-no" title="statement not covered" >    if (opts.includePaths) {</span>
-<span class="cstat-no" title="statement not covered" >      if (typeof opts.includePaths === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >        opts.includePaths = [opts.includePaths];</span>
+<span class="cstat-no" title="statement not covered">    if (opts.includePaths) {</span>
+<span class="cstat-no" title="statement not covered">      if (typeof opts.includePaths === 'string') {</span>
+<span class="cstat-no" title="statement not covered">        opts.includePaths = [opts.includePaths];</span>
       }
     }
     else {
-<span class="cstat-no" title="statement not covered" >      opts.includePaths = [];</span>
+<span class="cstat-no" title="statement not covered">      opts.includePaths = [];</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    opts.includePaths.unshift(path.dirname(file.path));</span>
+<span class="cstat-no" title="statement not covered">    opts.includePaths.unshift(path.dirname(file.path));</span>
 &nbsp;
     // Generate Source Maps if plugin source-map present
-<span class="cstat-no" title="statement not covered" >    if (file.sourceMap) {</span>
-<span class="cstat-no" title="statement not covered" >      opts.sourceMap = file.path;</span>
-<span class="cstat-no" title="statement not covered" >      opts.omitSourceMapUrl = true;</span>
-<span class="cstat-no" title="statement not covered" >      opts.sourceMapContents = true;</span>
+<span class="cstat-no" title="statement not covered">    if (file.sourceMap) {</span>
+<span class="cstat-no" title="statement not covered">      opts.sourceMap = file.path;</span>
+<span class="cstat-no" title="statement not covered">      opts.omitSourceMapUrl = true;</span>
+<span class="cstat-no" title="statement not covered">      opts.sourceMapContents = true;</span>
     }
 &nbsp;
     //////////////////////////////
     // Handles returning the file to the stream
     //////////////////////////////
-<span class="cstat-no" title="statement not covered" >    filePush = <span class="fstat-no" title="function not covered" >function filePush(sassObj) {</span></span>
-<span class="cstat-no" title="statement not covered" >      var sassMap,</span>
+<span class="cstat-no" title="statement not covered">    filePush = <span class="fstat-no" title="function not covered">function filePush(sassObj) {</span></span>
+<span class="cstat-no" title="statement not covered">      var sassMap,</span>
           sassMapFile,
           sassFileSrc,
           sassFileSrcPath,
           sourceFileIndex;
 &nbsp;
       // Build Source Maps!
-<span class="cstat-no" title="statement not covered" >      if (sassObj.map) {</span>
+<span class="cstat-no" title="statement not covered">      if (sassObj.map) {</span>
         // Transform map into JSON
-<span class="cstat-no" title="statement not covered" >        sassMap = JSON.parse(sassObj.map.toString());</span>
+<span class="cstat-no" title="statement not covered">        sassMap = JSON.parse(sassObj.map.toString());</span>
         // Grab the stdout and transform it into stdin
-<span class="cstat-no" title="statement not covered" >        sassMapFile = sassMap.file.replace(/^stdout$/, 'stdin');</span>
+<span class="cstat-no" title="statement not covered">        sassMapFile = sassMap.file.replace(/^stdout$/, 'stdin');</span>
         // Grab the base file name that's being worked on
-<span class="cstat-no" title="statement not covered" >        sassFileSrc = file.relative;</span>
+<span class="cstat-no" title="statement not covered">        sassFileSrc = file.relative;</span>
         // Grab the path portion of the file that's being worked on
-<span class="cstat-no" title="statement not covered" >        sassFileSrcPath = path.dirname(sassFileSrc);</span>
-<span class="cstat-no" title="statement not covered" >        if (sassFileSrcPath) {</span>
+<span class="cstat-no" title="statement not covered">        sassFileSrcPath = path.dirname(sassFileSrc);</span>
+<span class="cstat-no" title="statement not covered">        if (sassFileSrcPath) {</span>
           //Prepend the path to all files in the sources array except the file that's being worked on
-<span class="cstat-no" title="statement not covered" >          sourceFileIndex = sassMap.sources.indexOf(sassMapFile);</span>
-<span class="cstat-no" title="statement not covered" >          sassMap.sources = sassMap.sources.map(<span class="fstat-no" title="function not covered" >function(source, index) {</span></span>
-<span class="cstat-no" title="statement not covered" >            return (index === sourceFileIndex) ? source : path.join(sassFileSrcPath, source);</span>
+<span class="cstat-no" title="statement not covered">          sourceFileIndex = sassMap.sources.indexOf(sassMapFile);</span>
+<span class="cstat-no" title="statement not covered">          sassMap.sources = sassMap.sources.map(<span class="fstat-no" title="function not covered">function(source, index) {</span></span>
+<span class="cstat-no" title="statement not covered">            return (index === sourceFileIndex) ? source : path.join(sassFileSrcPath, source);</span>
           });
         }
 &nbsp;
         // Remove 'stdin' from souces and replace with filenames!
-<span class="cstat-no" title="statement not covered" >        sassMap.sources = sassMap.sources.filter(<span class="fstat-no" title="function not covered" >function(src) {</span></span>
-<span class="cstat-no" title="statement not covered" >          if (src !== 'stdin') {</span>
-<span class="cstat-no" title="statement not covered" >            return src;</span>
+<span class="cstat-no" title="statement not covered">        sassMap.sources = sassMap.sources.filter(<span class="fstat-no" title="function not covered">function(src) {</span></span>
+<span class="cstat-no" title="statement not covered">          if (src !== 'stdin') {</span>
+<span class="cstat-no" title="statement not covered">            return src;</span>
           }
         });
 &nbsp;
         // Replace the map file with the original file name (but new extension)
-<span class="cstat-no" title="statement not covered" >        sassMap.file = gutil.replaceExtension(sassFileSrc, '.css');</span>
+<span class="cstat-no" title="statement not covered">        sassMap.file = gutil.replaceExtension(sassFileSrc, '.css');</span>
         // Apply the map
-<span class="cstat-no" title="statement not covered" >        applySourceMap(file, sassMap);</span>
+<span class="cstat-no" title="statement not covered">        applySourceMap(file, sassMap);</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      file.contents = sassObj.css;</span>
-<span class="cstat-no" title="statement not covered" >      file.path = gutil.replaceExtension(file.path, '.css');</span>
+<span class="cstat-no" title="statement not covered">      file.contents = sassObj.css;</span>
+<span class="cstat-no" title="statement not covered">      file.path = gutil.replaceExtension(file.path, '.css');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      cb(null, file);</span>
+<span class="cstat-no" title="statement not covered">      cb(null, file);</span>
     };
 &nbsp;
     //////////////////////////////
     // Handles error message
     //////////////////////////////
-<span class="cstat-no" title="statement not covered" >    errorM = <span class="fstat-no" title="function not covered" >function errorM(error) {</span></span>
-<span class="cstat-no" title="statement not covered" >      var relativePath = '',</span>
+<span class="cstat-no" title="statement not covered">    errorM = <span class="fstat-no" title="function not covered">function errorM(error) {</span></span>
+<span class="cstat-no" title="statement not covered">      var relativePath = '',</span>
           filePath = error.file === 'stdin' ? file.path : error.file,
           message = '';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      filePath = filePath ? filePath : file.path;</span>
-<span class="cstat-no" title="statement not covered" >      relativePath = path.relative(process.cwd(), filePath);</span>
+<span class="cstat-no" title="statement not covered">      filePath = filePath ? filePath : file.path;</span>
+<span class="cstat-no" title="statement not covered">      relativePath = path.relative(process.cwd(), filePath);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      message += gutil.colors.underline(relativePath) + '\n';</span>
-<span class="cstat-no" title="statement not covered" >      message += error.formatted;</span>
+<span class="cstat-no" title="statement not covered">      message += gutil.colors.underline(relativePath) + '\n';</span>
+<span class="cstat-no" title="statement not covered">      message += error.formatted;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      error.messageFormatted = message;</span>
-<span class="cstat-no" title="statement not covered" >      error.messageOriginal = error.message;</span>
-<span class="cstat-no" title="statement not covered" >      error.message = gutil.colors.stripColor(message);</span>
+<span class="cstat-no" title="statement not covered">      error.messageFormatted = message;</span>
+<span class="cstat-no" title="statement not covered">      error.messageOriginal = error.message;</span>
+<span class="cstat-no" title="statement not covered">      error.message = gutil.colors.stripColor(message);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      error.relativePath = relativePath;</span>
+<span class="cstat-no" title="statement not covered">      error.relativePath = relativePath;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return cb(new gutil.PluginError(</span>
+<span class="cstat-no" title="statement not covered">      return cb(new gutil.PluginError(</span>
           PLUGIN_NAME, error
         ));
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (sync !== true) {</span>
+<span class="cstat-no" title="statement not covered">    if (sync !== true) {</span>
       //////////////////////////////
       // Async Sass render
       //////////////////////////////
-<span class="cstat-no" title="statement not covered" >      callback = <span class="fstat-no" title="function not covered" >function(error, obj) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (error) {</span>
-<span class="cstat-no" title="statement not covered" >          return errorM(error);</span>
+<span class="cstat-no" title="statement not covered">      callback = <span class="fstat-no" title="function not covered">function(error, obj) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (error) {</span>
+<span class="cstat-no" title="statement not covered">          return errorM(error);</span>
         }
-<span class="cstat-no" title="statement not covered" >        filePush(obj);</span>
+<span class="cstat-no" title="statement not covered">        filePush(obj);</span>
       };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      gulpSass.compiler.render(opts, callback);</span>
+<span class="cstat-no" title="statement not covered">      gulpSass.compiler.render(opts, callback);</span>
     }
     else {
       //////////////////////////////
       // Sync Sass render
       //////////////////////////////
-<span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >        result = gulpSass.compiler.renderSync(opts);</span>
+<span class="cstat-no" title="statement not covered">      try {</span>
+<span class="cstat-no" title="statement not covered">        result = gulpSass.compiler.renderSync(opts);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        filePush(result);</span>
+<span class="cstat-no" title="statement not covered">        filePush(result);</span>
       }
       catch (error) {
-<span class="cstat-no" title="statement not covered" >        return errorM(error);</span>
+<span class="cstat-no" title="statement not covered">        return errorM(error);</span>
       }
     }
   });
@@ -764,17 +762,17 @@ var gulpSass = <span class="fstat-no" title="function not covered" >function gul
 //////////////////////////////
 // Sync Sass render
 //////////////////////////////
-gulpSass.sync = <span class="fstat-no" title="function not covered" >function sync(options) {</span>
-<span class="cstat-no" title="statement not covered" >  return gulpSass(options, true);</span>
+gulpSass.sync = <span class="fstat-no" title="function not covered">function sync(options) {</span>
+<span class="cstat-no" title="statement not covered">  return gulpSass(options, true);</span>
 };
 &nbsp;
 //////////////////////////////
 // Log errors nicely
 //////////////////////////////
-gulpSass.logError = <span class="fstat-no" title="function not covered" >function logError(error) {</span>
-<span class="cstat-no" title="statement not covered" >  var message = new gutil.PluginError('sass', error.messageFormatted).toString();</span>
-<span class="cstat-no" title="statement not covered" >  process.stderr.write(message + '\n');</span>
-<span class="cstat-no" title="statement not covered" >  this.emit('end');</span>
+gulpSass.logError = <span class="fstat-no" title="function not covered">function logError(error) {</span>
+<span class="cstat-no" title="statement not covered">  var message = new gutil.PluginError('sass', error.messageFormatted).toString();</span>
+<span class="cstat-no" title="statement not covered">  process.stderr.write(message + '\n');</span>
+<span class="cstat-no" title="statement not covered">  this.emit('end');</span>
 };
 &nbsp;
 //////////////////////////////
@@ -785,10 +783,11 @@ gulpSass.compiler = require('node-sass');
 module.exports = gulpSass;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 21:23:11 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 10:04:44 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
