@@ -1,6 +1,6 @@
 # npmtest-gulp-sass
 
-#### test coverage for  [gulp-sass (v3.1.0)](https://github.com/dlmanning/gulp-sass#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-sass.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-sass) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-sass.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-sass)
+#### basic test coverage for  [gulp-sass (v3.1.0)](https://github.com/dlmanning/gulp-sass#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-sass.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-sass) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-sass.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-sass)
 
 #### Gulp plugin for sass
 
